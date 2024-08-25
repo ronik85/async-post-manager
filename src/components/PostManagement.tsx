@@ -12,7 +12,6 @@ const PostManagement: React.FC = () => {
     const [failCount, setFailCount] = useState<number>(0);
     const [queueSize, setQueueSize] = useState<number>(0);
     const [totalPosts, setTotalPosts] = useState<number>(0);
-    const [loading, setLoading] = useState<boolean>(false);
 
     let randomNumber = Math.floor(Math.random() * 100) + 1; // add number to each post to make it unique
     /**
@@ -34,7 +33,6 @@ const PostManagement: React.FC = () => {
 
         const token = localStorage.getItem('token');
 
-        setLoading(true); // Set loading to true when starting the request
 
         try {
             const response = await axios.post('http://localhost:3000/api/post/create', {
@@ -47,14 +45,13 @@ const PostManagement: React.FC = () => {
             });
 
             if (response.status === 202) {
-                setSuccessCount(successCount + 1);
+                setSuccessCount((prev) => prev + 1);
                 fetchTotalPosts();
             }
         } catch (error) {
             setFailCount(failCount + 1);
         } finally {
             setQueueSize(prevQueueSize => Math.max(prevQueueSize - 1, 0));
-            setLoading(false); // Reset loading state after request
         }
     };
 
@@ -87,9 +84,8 @@ const PostManagement: React.FC = () => {
                     <p>Queue Size: {queueSize}</p>
                     <p>Total Posts in MongoDB: {totalPosts}</p>
                 </div>
-                <button onClick={createPost} disabled={loading}>
-                    {loading ? 'Creating Post...' : 'Create Post'}
-                </button>
+                <button onClick={createPost} >Create post</button>
+                
             </div>
             <div className="search-container">
                 <PostSearch />
