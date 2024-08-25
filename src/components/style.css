@@ -1,0 +1,141 @@
+/* login */
+.login-container {
+  background-color: #edcd44;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+h2 {
+  color: #dc3e26;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #dc3e26;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #dc3e26;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #a82a1b;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  border: 1px solid #c0c0c0;
+  opacity: 0.7;
+}
+button:disabled:hover {
+  background-color: #e0e0e0;
+}
+
+/* Post Management */
+.post-management-container {
+  background-color: #edcd44;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #744d2a;
+  width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  height: 600px;
+  overflow: hidden;
+}
+
+.details-container {
+  flex: 1;
+  margin-right: 10px;
+  height: 100%;
+  width: 60%;
+  border-right: 1px solid #a82a1b;
+  padding-right: 10px;
+}
+
+.search-container {
+  flex: 0 0 300px;
+  overflow-y: auto;
+  height: 100%;
+  width: 30%;
+}
+
+h1 {
+  color: #dc3e26;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #dc3e26;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #a82a1b;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Search */
+.post-search-container {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #edcd44;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #edcd44;
+  color: #dc3e26;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+li:hover {
+  background-color: #dc3e26;
+  color: #ffffff;
+}
